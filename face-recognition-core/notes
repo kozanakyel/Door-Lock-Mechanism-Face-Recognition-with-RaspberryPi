@@ -1,5 +1,4 @@
-Instruction for opencv-installation
-
+-Instruction for opencv-installation and project setup
 
 python3 -m venv venv
 
@@ -17,6 +16,10 @@ libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 source venv/bin/activate
 
 pip install -r requirements.txt
+
+-initialize a new person image data or adding existence one for new images
+-each spacebar take a new photo addind dataset and ESC exit the headshots.py 
+python headshots.py -n <name>
 
 python encode_faces.py --dataset dataset --encodings encodings.pickle --detection-method hog
 
