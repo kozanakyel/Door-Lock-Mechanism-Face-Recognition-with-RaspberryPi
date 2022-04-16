@@ -1,4 +1,3 @@
-# import the necessary packages
 from imutils.video import VideoStream
 from imutils.video import FPS
 import face_recognition
@@ -7,6 +6,7 @@ import imutils
 import pickle
 import time
 import cv2
+
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-c", "--cascade", required=True,
@@ -14,6 +14,7 @@ ap.add_argument("-c", "--cascade", required=True,
 ap.add_argument("-e", "--encodings", required=True,
 	help="path to serialized db of facial encodings")
 args = vars(ap.parse_args())
+
 
 # load the known faces and embeddings along with OpenCV's Haar
 # cascade for face detection
@@ -87,7 +88,7 @@ while True:
 			0.75, (0, 255, 0), 2)
 	# display the image to our screen
 	cv2.imshow("Frame", frame)
-	key = cv2.waitKey(1) & 0xFF
+	key = cv2.waitKey(1)
 	# if the `q` key was pressed, break from the loop
 	if key == ord("q"):
 		break
