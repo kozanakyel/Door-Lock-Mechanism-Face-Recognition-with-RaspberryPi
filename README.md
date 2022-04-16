@@ -4,10 +4,10 @@
 ## Team Name: Ejderha
 
 ### Team Members & Roles: 
-•Uğur AKYEL (Leader): Image Processing, Raspberry Pi Hardware &Software Configuration 
-•Vesile ÇELİK: Backend Developer
-•Simge HATİPOĞLU: Frontend Developer
-•Enes DEMİRTAŞ: Image Processing, Raspberry Pi Hardware &Software Configuration
+- Uğur AKYEL (Leader): Image Processing, Raspberry Pi Hardware &Software Configuration 
+- Vesile ÇELİK: Backend Developer
+- Simge HATİPOĞLU: Frontend Developer
+- Enes DEMİRTAŞ: Image Processing, Raspberry Pi Hardware &Software Configuration
 
 ### Deliverables: 
 
