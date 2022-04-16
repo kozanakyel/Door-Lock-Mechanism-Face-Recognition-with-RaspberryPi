@@ -1,6 +1,13 @@
 import cv2
+import argparse
+import re
+import os
 
-name = 'kursat' #replace with your name
+parser = argparse.ArgumentParser()
+parser.add_argument('-n', '--name', help='Please give a name for dataset')
+args = parser.parse_args()
+
+name = args.name
 
 cam = cv2.VideoCapture(0)
 
