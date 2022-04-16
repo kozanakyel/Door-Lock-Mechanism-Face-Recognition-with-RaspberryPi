@@ -74,9 +74,11 @@ while True:
 			# of votes (note: in the event of an unlikely tie Python
 			# will select first entry in the dictionary)
 			name = max(counts, key=counts.get)
+			print('each recognized face face', counts)
 		
 		# update the list of names
 		names.append(name)
+		print('update the list of names', names)
 	
 	# loop over the recognized faces
 	for ((top, right, bottom, left), name) in zip(boxes, names):
