@@ -6,6 +6,15 @@ import imutils
 import pickle
 import time
 import cv2
+import RPi.GPIO as GPIO
+
+RELAY = 17
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(RELAY, GPIO.OUT)
+GPIO.output(RELAY,GPIO.LOW)
+
+currentname = "unknown"
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -28,6 +37,9 @@ vs = VideoStream(src=0).start()
 time.sleep(2.0)
 # start the FPS counter
 fps = FPS().start()
+
+prevTime = 0
+doorUnlock = False
 
 # loop over frames from the video file stream
 while True:
@@ -65,8 +77,12 @@ while True:
 			# was matched
 			matchedIdxs = [i for (i, b) in enumerate(matches) if b]
 			counts = {}
-			# loop over the matched indexes and maintain a count for
-			# each recognized face face
+
+			GPIO.output(RELAY,GPIO.HIGH)
+			prevTime = time.time()
+			doorUnlock = True
+			print("door unlock")
+			
 			for i in matchedIdxs:
 				name = data["names"][i]
 				counts[name] = counts.get(name, 0) + 1
@@ -74,11 +90,18 @@ while True:
 			# of votes (note: in the event of an unlikely tie Python
 			# will select first entry in the dictionary)
 			name = max(counts, key=counts.get)
-			print('each recognized face face', counts)
+			
+			if currentname != name:
+				currentname = name
+				print(currentname)
 		
 		# update the list of names
 		names.append(name)
-		print('update the list of names', names)
+
+	if doorUnlock == True and time.time() - prevTime > 5:
+		doorUnlock = False
+		GPIO.output(RELAY,GPIO.LOW)
+		print("door lock")
 	
 	# loop over the recognized faces
 	for ((top, right, bottom, left), name) in zip(boxes, names):
