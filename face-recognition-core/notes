@@ -19,6 +19,7 @@ pip install -r requirements.txt
 
 -initialize a new person image data or adding existence one for new images
 -each spacebar take a new photo addind dataset and ESC exit the headshots.py 
+
 python headshots.py -n <name>
 
 python encode_faces.py --dataset dataset --encodings encodings.pickle --detection-method hog
