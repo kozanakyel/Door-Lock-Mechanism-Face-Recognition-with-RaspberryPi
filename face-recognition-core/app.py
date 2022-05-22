@@ -4,6 +4,10 @@ from markupsafe import escape
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return "<h1>Welcome Face Recgonition Door lock mechanism</h1>"
+
 @app.route("/start")
 def start():
     os.system('python fc_req_part.py')
