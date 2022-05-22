@@ -18,3 +18,6 @@ def newuser(username):
 def encodeFaces():
     os.system('python encode_faces.py --dataset dataset --encodings encodings.pickle --detection-method hog')
     return "<p>Encodeing the faces!</p>"
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", debug=True) 
