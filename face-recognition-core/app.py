@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import os
 from markupsafe import escape
 
@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "<h1>Welcome Face Recgonition Door lock mechanism</h1>"
+    return render_template('index.html')
 
 @app.route("/start")
 def start():
-    os.system('python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml --encodings encodings.pickle')
-    return "<p>start running!</p>"
+    os.system('python fc_req_part.py')
+    return render_template('index.html')
 
 @app.route("/newuser/<username>")
 def newuser(username):
