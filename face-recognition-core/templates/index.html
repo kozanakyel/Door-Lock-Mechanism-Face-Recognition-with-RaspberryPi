@@ -2,310 +2,114 @@
 <html lang="en">
 
 <head>
-    <title>ADMIN PANEL</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Links website</title>
     <style>
-        html,
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: "RobotoDraft", "Roboto", sans-serif
+        body {
+            font-family: 'Syne', sans-serif;
+            margin-bottom: 3rem;
+            background-image: url("https://c.tenor.com/acWury2IjO0AAAAC/fire-breathing-dragon.gif");
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
         }
-        
-        .w3-bar-block .w3-bar-item {
-            padding: 16px
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
         }
+
+        .image-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            color: white;
+        }
+
     </style>
 </head>
 
-<body>
 
-    <!-- Side Navigation -->
-    <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Add Guest <i class="w3-padding fa fa-pencil"></i></a>
-        <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" class="w3-bar-item w3-button w3-hide-large  w3-border-bottom test w3-hover-red"> Close <i class="fa fa-remove"></i></a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Home');w3_close();" id="firstTab"><i class="fa fa-home w3-margin-right"></i>Last Entries</a>
-        <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o w3-margin-right"></i>Guests <i class="fa fa-caret-down w3-margin-left"></i></a>
-        <div id="Demo1" class="w3-hide w3-animate-left">
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
-                <div class="w3-container">
-                    <img class="w3-round w3-margin-right" src="https://www.w3schools.com/w3images/avatar3.png" style="width:15%;"><span class="w3-opacity w3-large">Borge Refsnes</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
-                <div class="w3-container">
-                    <img class="w3-round w3-margin-right" src="https://www.w3schools.com/w3images/avatar5.png" style="width:15%;"><span class="w3-opacity w3-large">Jane Doe</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
-                <div class="w3-container">
-                    <img class="w3-round w3-margin-right" src="https://www.w3schools.com/w3images/avatar2.png" style="width:15%;"><span class="w3-opacity w3-large">John Doe</span>
-                </div>
-            </a>
+<body class="w3-white">
+    <!-- Image and name container. Change to your picture here. -->
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1532190410175-1c1a8169b1e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+            class="w3-margin" alt="Person" max-width="100%" height="150px" style="border-radius: 50%;">
+
+        
+        <div class="w3-margin w3-animate-top">
+            <h2 class="w3-text-white"><strong>EJDERHA</strong></h2>
+            <h3>IOT PROJECT</h3>
+            <p><strong>1.</strong> Click open camera button for open the camera.</p>
+            <p><strong>2.</strong> Use space button on your keyword to take picture.</p>
+            <p><strong>3.</strong> Please take 5 pictures of your face.</p>
+            <p><strong>4.</strong> Use esc button on your keyword to exit camera.</p>
+            <p><strong>5.</strong> Click the save button to train your data.</p>
         </div>
-    </nav>
 
-    <!-- Modal that pops up when you click on "New Message" -->
-    <div id="id01" class="w3-modal" style="z-index:4">
-        <div class="w3-modal-content w3-animate-zoom">
-            <div class="w3-container w3-padding w3-red">
-                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-                <h2>Add Guest</h2>
-            </div>
-            <div class="w3-panel">
-                <label>Name</label>
-                <input class="w3-input w3-border w3-margin-bottom" type="text">
-                <label>Surname</label>
-                <input class="w3-input w3-border w3-margin-bottom" type="text">
-                <div class="w3-section">
-                    <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-                    <a class="w3-button w3-light-grey w3-right" href="http://127.0.0.1:5000/start" ><i class="fa fa-camera-retro"></i></a>
-                </div>
-            </div>
+       
+    <div id="content">
+        <div class="links-container w3-animate-buttom">
+            <form action="{{ url_for('newuser') }}" method="post">
+                <label class="w3-margin w3-xlarge w3-text-white"> Enter Your Name: </label>
+                <input class="w3-margin w3-xlarge" type="text" style="width: 350px; margin: 2px; border: 1px solid;"
+                    name="username">
+                <input class="w3-button w3-hover-red w3-xlarge w3-white" onClick="loading();" type="submit" style="width: 350px;">Submit and
+                Take Photos</input>
+
+            </form>
+            <!--<a type="button" href="http://127.0.0.1:5000/newuser"
+                class="w3-button w3-hover-red w3-xlarge w3-black fa fa-camera-retro" style="width: 350px;"
+                target="_blank"></i> Open Camera</a>-->
+
+            
+
+                <form action="{{ url_for('encodeFaces') }}" method="get">
+                    <input class="w3-button w3-hover-red w3-xlarge w3-black fa fa-trash" onClick="loading();" type="submit" value="Save" style="width: 350px;">
+    
+                </form>
+            
+                <form action="{{ url_for('start') }}" method="get">
+                    <input class="w3-button w3-hover-red w3-xlarge w3-black fa fa-trash" onClick="loading();" type="submit" value="Start" style="width: 350px;">
+    
+                </form>
+
+        </div>
         </div>
     </div>
-
-    <!-- Overlay effect when opening the side navigation on small screens -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
-
-    <!-- Page content -->
-    <div class="w3-main" style="margin-left:320px;">
-        <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
-        <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
-
-        <div id="Home" class="w3-container person w3-animate-top w3-padding-top-48">
-            <div class="w3-container " <h5>Recent Entries</h5>
-                <ul class="w3-ul w3-card-4 w3-white ">
-                    <li class="w3-padding-16 w3-hover-light-gray">
-                        <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-                        <span class="w3-xlarge">Mike</span><br>
-                    </li>
-                    <li class="w3-padding-16 w3-hover-light-gray">
-                        <img src="https://www.w3schools.com/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-                        <span class="w3-xlarge">Jill</span><br>
-                    </li>
-                    <li class="w3-padding-16 w3-hover-light-gray">
-                        <img src="https://www.w3schools.com/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-                        <span class="w3-xlarge">Jane</span>
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <div class="w3-container">
-                <h5>Entry History</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                </table><br>
-                <button class="w3-button w3-dark-grey">More  <i class="fa fa-arrow-right"></i></button>
-            </div>
-            <hr>
-        </div>
-        <br>
-
-        <div id="Borge" class="w3-container person">
-            <br>
-            <img class="w3-round w3-animate-top" src="https://www.w3schools.com/w3images/avatar3.png" style="width:20%;">
-            <h5 class="w3-opacity"></h5>
-            <h4><i class="fa fa-clock-o"></i> Last Entry, May 23, 2022.</h4>
-            <hr>
-
-            <div class="w3-container">
-                <h5>Entry History</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                </table><br>
-                <button class="w3-button w3-dark-grey">More  <i class="fa fa-arrow-right"></i></button>
-            </div>
-            <hr>
-        </div>
-
-        <div id="Jane" class="w3-container person">
-            <br>
-            <img class="w3-round w3-animate-top" src="https://www.w3schools.com/w3images/avatar5.png" style="width:20%;">
-            <h5 class="w3-opacity"></h5>
-            <h4><i class="fa fa-clock-o"></i> Last Entry, May 23, 2022.</h4>
-            <hr>
-
-            <div class="w3-container">
-                <h5>Entry History</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                </table><br>
-                <button class="w3-button w3-dark-grey">More  <i class="fa fa-arrow-right"></i></button>
-            </div>
-            <hr>
-        </div>
-
-        <div id="John" class="w3-container person">
-            <br>
-            <img class="w3-round w3-animate-top" src="https://www.w3schools.com/w3images/avatar2.png" style="width:20%;">
-            <h5 class="w3-opacity"></h5>
-            <h4><i class="fa fa-clock-o"></i> Last Entry, May 23, 2022.</h4>
-            <hr>
-
-            <div class="w3-container">
-                <h5>Entry History</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                    <tr>
-                        <td>May 23, 2022</td>
-                        <td>13:50</td>
-                    </tr>
-                </table><br>
-                <button class="w3-button w3-dark-grey">More  <i class="fa fa-arrow-right"></i></button>
-            </div>
-            <hr>
-        </div>
-
     </div>
 
-    <script>
-        var openInbox = document.getElementById("myBtn");
-        openInbox.click();
-
-        function fetchStart()
-  {
-      fetch('http://127.0.0.1:5000/start');
-  }
-
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
+    <script type="text/javascript">// <![CDATA[
+        function loading() {
+            $("#loading").show();
+            $("#content").hide();
         }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-
-        function myFunc(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-                x.previousElementSibling.className += " w3-red";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-                x.previousElementSibling.className =
-                    x.previousElementSibling.className.replace(" w3-red", "");
-            }
-        }
-
-        openMail("Borge")
-
-        function openMail(personName) {
-            var i;
-            var x = document.getElementsByClassName("person");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x = document.getElementsByClassName("test");
-            for (i = 0; i < x.length; i++) {
-                x[i].className = x[i].className.replace(" w3-light-grey", "");
-            }
-            document.getElementById(personName).style.display = "block";
-            event.currentTarget.className += " w3-light-grey";
-        }
-    </script>
-
-    <script>
-        var openTab = document.getElementById("firstTab");
-        openTab.click();
-    </script>
+// ]]></script>
 
 </body>
 

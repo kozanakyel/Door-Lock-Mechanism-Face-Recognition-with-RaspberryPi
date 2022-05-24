@@ -1,27 +1,29 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
 from markupsafe import escape
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
     return render_template('index.html')
 
-@app.route("/start")
+@app.route("/start", methods=['GET'])
 def start():
     os.system('python fc_req_part.py')
     return render_template('index.html')
 
-@app.route("/newuser/<username>")
-def newuser(username):
-    os.system(f'python headshots.py -n {username}')
-    return "<p>New Register!</p>"
+@app.route("/newuser", methods=['POST'])
+def newuser():
+    user = request.form['username']
+    os.system(f'python headshots.py -n {user}')
+    return render_template('index.html')
 
-@app.route("/encodingfaces")
+@app.route("/encodingfaces", methods=['GET'])
 def encodeFaces():
     os.system('python encode_faces.py --dataset dataset --encodings encodings.pickle --detection-method hog')
-    return "<p>Encodeing the faces!</p>"
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True) 
