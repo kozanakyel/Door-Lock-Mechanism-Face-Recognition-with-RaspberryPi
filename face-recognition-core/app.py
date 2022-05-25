@@ -11,7 +11,7 @@ def index():
 
 @app.route("/start", methods=['GET'])
 def start():
-    os.system('python fc_req_part.py')
+    os.system('python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml --encodings encodings.pickle')
     return render_template('index.html')
 
 @app.route("/newuser", methods=['POST'])
