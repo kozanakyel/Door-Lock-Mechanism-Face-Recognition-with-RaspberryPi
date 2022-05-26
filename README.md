@@ -17,4 +17,6 @@
 
 •We are going to use Python and OpenCV to capture the webcam image and process it. For facerecognition, we are considering using the DeepFace library.To control the general-purpose input-output pins of Raspberry Pi, we will use the pigpio library.
 
+•Resource for how Haar Cascade method works :  https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html
+
 •As an advanceddevelopmentobjective, we thought that running the webcam all the time is not a logical way. Instead, we considered addingan ultrasonic sensor to identify whether there is a person or not. Thanks to the ultrasonic sensor, we can control the running status of the webcam and image processing algorithms.
